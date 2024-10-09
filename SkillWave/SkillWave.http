@@ -1,0 +1,6 @@
+@SkillWave_HostAddress = http://localhost:5084
+
+GET {{SkillWave_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
