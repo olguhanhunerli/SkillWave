@@ -15,6 +15,6 @@ Bu proje, kursların, öğretmenlerin, öğrencilerin ve kurs kayıtlarının (e
 - **.NET Core 8.0**
 - **Entity Framework Core**
 - **MySQL**
-- **Database First
+- **DatabaseFirst
 - **JWT (JSON Web Token) Kimlik Doğrulama**
 - **Swagger** ile API dokümantasyonu
