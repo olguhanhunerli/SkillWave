@@ -13,6 +13,8 @@ namespace Entities.Models
         public string user_name { get; set; }
         public string password_hash { get; set; }
         public string user_role { get; set; }
+        public string? refresh_token { get; set; }
+        public DateTime? token_expirytime { get; set; } = DateTime.UtcNow;
         public DateTime created_at { get; set; } = DateTime.UtcNow;
         public bool user_status { get; set; }
 

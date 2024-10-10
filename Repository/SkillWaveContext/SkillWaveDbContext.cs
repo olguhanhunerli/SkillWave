@@ -46,6 +46,8 @@ namespace Repository.SkillWaveContext
                 .HasOne(c => c.Students)
                 .WithMany(e => e.Enrollments)
                 .HasForeignKey(c => c.student_id);
+            modelBuilder.Entity<Courses>()
+                .HasKey(c => c.course_id);
         }
     }
 }

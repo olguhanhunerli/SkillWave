@@ -43,5 +43,16 @@ namespace Repository
         {
             return await _context.Users.FirstOrDefaultAsync(u =>u.user_email == email);
         }
+
+        public async Task<User> RefreshToken(string token)
+        {
+            return await _context.Users.FirstOrDefaultAsync(r => r.refresh_token == token);
+        }
+
+        public async Task UpdateUser(User user)
+        {
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+        }
     }
 }

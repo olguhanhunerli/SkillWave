@@ -70,5 +70,21 @@ namespace Presentation.Controller
                 return Unauthorized();
             }
         }
+        [Produces("application/json")]
+        [HttpPost("RefreshToken")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TokenResponse))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ErrorResponse))]
+        public async Task<IActionResult> RefreshToken(TokenDto tokenResponse)
+        {
+            try 
+            {
+                var token = await _service.RefreshToken(tokenResponse.RefreshToken);
+                return Ok(new {Succes = true, AccessToken = token});
+            }
+            catch 
+            { 
+                return Unauthorized();
+            }
+        }
     }
 }

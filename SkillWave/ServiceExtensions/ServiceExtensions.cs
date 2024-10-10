@@ -25,10 +25,12 @@ namespace SkillWave.ServiceExtensions
         {
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IAuthServices, AuthService>();
+            services.AddScoped<ICourseService, CoursesService>();
         }
         public static void ConfigureRepository(this IServiceCollection services)
         {
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<ICourseRepository, CourseRepository>();
         }
         
     }

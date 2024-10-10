@@ -12,5 +12,6 @@ namespace Entities.Models
         public Courses Courses { get; set; }
         public int student_id { get; set; }
         public Students Students { get; set; }
+        public DateTime? enrollment_date { get; set; }
     }
 }

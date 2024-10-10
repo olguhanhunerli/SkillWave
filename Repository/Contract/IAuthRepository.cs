@@ -13,5 +13,7 @@ namespace Repository.Contract
         Task AddUser (User user);   
         Task AddTeacher(Teachers teacher);  
         Task AddStudent(Students student);
+        Task<User> RefreshToken(string token);
+        Task UpdateUser(User user);
     }
 }
